@@ -17,6 +17,13 @@ function div(){
 	var div = dividendo.toString();
 	var cos="",res,d = 0;
 
+	if(div === "0"){
+		cos += "0";
+		cociente.innerHTML = cos;
+		return false;
+	}
+
+
 	div = div.split('')
 
 	var i=0,j=0;
@@ -122,4 +129,28 @@ function putGfxM(res,j){
 	var ch = document.createTextNode(rell+res);
 
 	ar.appendChild(ch);
+}
+
+function check(){
+	var dividendo = document.getElementById('dividendo');
+	var divisor = document.getElementById('divisor');
+
+	if((divisor.value).toString() === "0")
+	{
+		divisor.style.background = "rgba(225,24,24,0.6)";
+		return false;
+	}
+/*
+	if((/\D/g).test((divisor.value).toString())){
+		divisor.style.background = "rgba(225,24,24,0.6)";
+		return false;
+	}
+
+	if((/\D/g).test((dividendo.value).toString())){
+		dividendo.style.background = "rgba(225,24,24,0.6)";
+		return false;
+	}*/
+
+
+	div();
 }
