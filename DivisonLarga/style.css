@@ -28,6 +28,27 @@ input[type=text]{
 	width: 100%
 }
 
+button{
+	background: rgba(56,56,56,0.5);
+	color:#FFF;
+	font-family: 'BevanRegular';
+	border:0;
+	outline:0;
+	cursor:pointer;
+	display: block;
+	width:40%;
+	margin:2em auto 0  auto;
+	padding: 0.5em;
+	text-align: center;
+	font-size: 2em;
+}
+
+button:hover{
+	background: rgba(56,56,56,0.7);
+
+	-webkit-transition:all ease 1s;
+}
+
 header{
 	margin: 2em auto;
 }
