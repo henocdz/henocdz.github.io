@@ -19,6 +19,7 @@ body,html{
 }
 
 input[type=text]{
+	background: rgba(56,56,56,0.3) !important;
 	font-size: 3em;
 	font-family:'BevanRegular';
 	border:0;
@@ -96,6 +97,11 @@ h1{
 	border: 0 solid black;
 	border-width: 1em 0 0 1em;
 	float: left;
+}
+
+#ddivisor{
+	border: 0 solid transparent;
+	border-width: 1em 0 0 0;
 }
 
 #residuos{

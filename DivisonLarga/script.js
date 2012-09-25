@@ -6,6 +6,9 @@ function div(){
 
 	document.getElementById('residuos').innerHTML = "";
 
+	document.getElementById('dividendo').style.background = "background: rgba(56,56,56,0.5)";
+	document.getElementById('divisor').style.background = "background: rgba(56,56,56,0.5)";
+
 	var dotAtDiv = divisor.indexOf(".");
 	if(dotAtDiv>=0)
 	{	
@@ -135,10 +138,30 @@ function check(){
 	var dividendo = document.getElementById('dividendo');
 	var divisor = document.getElementById('divisor');
 
-	if((divisor.value).toString() === "0")
+
+
+	var ddv = dividendo.value.toString();
+	var dsv = divisor.value.toString();
+
+	if(ddv == "" || dsv == ""){
+		if(ddv === ""){
+			dividendo.style.background = "rgba(225,24,24,0.6)";
+			dividendo.focus();
+			return false;
+		}
+
+		if(dsv === ""){
+			divisor.style.background = "rgba(225,24,24,0.6)";
+			divisor.focus();
+			return false;
+		}
+	}
+
+	if(dsv === "0")
 	{
 		divisor.style.background = "rgba(225,24,24,0.6)";
-		return false;
+		divisor.focus();
+		return;
 	}
 /*
 	if((/\D/g).test((divisor.value).toString())){
