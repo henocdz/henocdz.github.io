@@ -6,8 +6,8 @@ function div(){
 
 	document.getElementById('residuos').innerHTML = "";
 
-	document.getElementById('dividendo').style.background = "background: rgba(56,56,56,0.5)";
-	document.getElementById('divisor').style.background = "background: rgba(56,56,56,0.5)";
+	document.getElementById('dividendo').style.background = "rgba(56,56,56,0.5)";
+	document.getElementById('divisor').style.background = "rgba(56,56,56,0.5)";
 
 	var dotAtDiv = divisor.indexOf(".");
 	if(dotAtDiv>=0)
