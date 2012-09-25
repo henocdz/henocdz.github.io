@@ -109,7 +109,7 @@ function putGfx(res,j){
 	var rell = "";
 
 	for(k=0;k<j;k++)
-		rell+="0";
+		rell+="_";
 
 	var ch = document.createTextNode(rell+res);
 	ar.setAttribute('id','res'+j.toString());
@@ -118,6 +118,7 @@ function putGfx(res,j){
 	rs.appendChild(ar);
 }
 
+//
 function putGfxM(res,j){
 	var ar = document.getElementById('res'+j);
 	var rs = document.getElementById('residuos');
@@ -127,7 +128,7 @@ function putGfxM(res,j){
 		return false;
 	}
 	for(k=0;k<(j);k++)
-		rell+="0";
+		rell+="_";
 
 	var ch = document.createTextNode(rell+res);
 
@@ -138,23 +139,18 @@ function check(){
 	var dividendo = document.getElementById('dividendo');
 	var divisor = document.getElementById('divisor');
 
-
-
 	var ddv = dividendo.value.toString();
 	var dsv = divisor.value.toString();
 
-	if(ddv == "" || dsv == ""){
-		if(ddv === ""){
-			dividendo.style.background = "rgba(225,24,24,0.6)";
-			dividendo.focus();
-			return false;
-		}
-
-		if(dsv === ""){
-			divisor.style.background = "rgba(225,24,24,0.6)";
-			divisor.focus();
-			return false;
-		}
+	if(ddv === ""){
+		dividendo.style.background = "rgba(225,24,24,0.6)";
+		dividendo.focus();
+		return false;
+	}
+	if(dsv === ""){
+		divisor.style.background = "rgba(225,24,24,0.6)";
+		divisor.focus();
+		return false;
 	}
 
 	if(dsv === "0")
@@ -163,16 +159,16 @@ function check(){
 		divisor.focus();
 		return;
 	}
-/*
-	if((/\D/g).test((divisor.value).toString())){
+
+	if((/[A-z]/g).test((divisor.value).toString())){
 		divisor.style.background = "rgba(225,24,24,0.6)";
 		return false;
 	}
 
-	if((/\D/g).test((dividendo.value).toString())){
+	if((/[A-z]/g).test((dividendo.value).toString())){
 		dividendo.style.background = "rgba(225,24,24,0.6)";
 		return false;
-	}*/
+	}
 
 
 	div();

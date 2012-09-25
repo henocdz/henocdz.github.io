@@ -19,7 +19,7 @@ body,html{
 }
 
 input[type=text]{
-	background: rgba(56,56,56,0.3) !important;
+	/*background: rgba(56,56,56,0.3) !important;*/
 	font-size: 3em;
 	font-family:'BevanRegular';
 	border:0;
